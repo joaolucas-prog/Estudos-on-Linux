@@ -51,5 +51,24 @@ void main() {
    * }else {
    *  //codigo
    * }
-   * */
+   *
+   * condicional switch case
+   *
+   * estrutura
+   * switch(variavel){
+   *  case condicao:
+   *    break;
+   *  case condicao2:
+   *    break;
+   *}
+   *  o switch pega uma variavel e verifica o valor dela
+   *  caso seja alguma condicao que voce escolhei ele ira
+   *  reproduzir o trecho de codigo ate o break que
+   *  encerra o switch, podemos utilizar o continue
+   *  no lugar do switch , porem ele continuara verificando
+   *  as outras condicoes
+   *
+   *
+   *
+   *  */
 }
