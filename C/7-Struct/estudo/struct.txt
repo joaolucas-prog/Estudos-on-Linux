@@ -1,0 +1,51 @@
+Struct
+  Structs, também conhecidas como Registros, definem tipos de dados que agrupam
+  variáveis sob um mesmo tipo de dado. A ideia de usar uma struct é permitir que,
+  ao armazenar os dados de uma mesma entidade, isto possa ser feito com uma única variável.
+  Por exemplo, se for preciso armazenar a altura, o peso e a idade de uma pessoa,
+  pode-se criar uma struct chamada Pessoa e agrupar os dados em um único tipo de dado, 
+  conforme o exemplo a seguir. Aos dados agruados em uma struct dá-se o nome de campos(fields).
+
+  Ex:1 
+  typedef struct // Cria uma STRUCT para armazenar os dados de uma pessoa
+  {
+      float Peso;   // define o campo Peso
+      int Idade;    // define o campo Idade
+      float Altura; // define o campo Altura
+  } Pessoa; // Define o nome do novo tipo criado
+
+ //OBS como a função typedef não precisamos escrever sempre struct Pessoa nome_variavel; podemos
+ //simplesmente escrever Pessoa nome_variavel;
+  Ex:2
+  struct palavra{ //cria uma struct para armazenar os dados de uma palavra 
+    int ordem;
+    char letra;
+    char texto[255];
+  }
+
+Criando uma variavel do tipo struct:
+  struc Pessoa joao;
+
+Adicionando valores a variavel joao:
+  joao.peso = 83.5;
+  joao.idade= 22;
+  joao.altura = 1.82;
+
+As outras estruturas de dados também são aplicaveis ao strutc como por exemplo array
+
+  struct Pessoa listaPessoas[5];
+
+E também aceita o próprio struct como campo:
+  
+  typedef strutc{
+    int dia;
+    int mes;
+    int ano;
+  }Data;
+
+  struct Pessoa{
+    int idade;
+    Data nascimento;
+  }
+
+

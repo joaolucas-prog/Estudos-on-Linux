@@ -1,0 +1,39 @@
+Incluindo outros arquivos no projeto
+  Para incluir novos arquivos no seu projeto, devemos criar uma
+  biblioteca, para isso basta criar um arquivo com final ".h" e
+  pronto. Porém o que deve conter neste novo arquivo são apenas
+  as funções que você criou, não precisa importar nenhuma outra
+  biblioteca como stdio.
+
+Alocação Dinamica para Vetores
+  Para alocar um espaço na memória é preciso utilizar a função 
+  chamada malloc, que por sua vez recebe um parametro que é o 
+  tamanho de bytes que você deseja alocar, para alocar um valor
+  de um tipo primitivo bast usar uma função nativa chamada
+  sizeof()
+
+  ex: uma função que recebe um tamanho de um vetor e aloca a memoria
+
+  int *alocaVetor(int tamanho){
+    int *aux
+    aux = (int*) malloc(tamanho * sizeof(int));
+    return aux;
+  }
+ para liberar o espaço utilizado basta utilizar a função free(nome_ponteiro)
+
+Alocação Dinamica para Matriz
+  Para alocar um espaço na memória para matrizes utiliza-se da mesma ideia do
+  Vetor, porém para cada espaço de vetor ele tem um ponteiro para outro vetor
+  para assim criar uma matri
+
+  int **matriz;
+
+  //alocando memória para coluna
+  matriz = (int **) malloc(coluna * sizeof(int *));
+ 
+  //alocando memória para linha
+  for(int i = 0 ; i < colunas; i++){
+    matriz[i] = (int *) malloc(linha * sizeof(int));
+  }
+
+  free(matriz);

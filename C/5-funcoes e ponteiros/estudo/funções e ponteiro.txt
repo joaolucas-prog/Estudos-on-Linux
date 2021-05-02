@@ -1,0 +1,25 @@
+Ponteiro
+  um ponteiro é uma variável que 'aponta' para um local da memória
+  onde um determinado valor foi salvo, ele guarda a posição da memoria
+  em que um valor foi salvado. Podemos então mudar o valor que foi
+  guardada neste local atribuindo o novo valor ao ponteiro.
+
+  um ponteiro é dado pelo simbolo *
+
+  ex int *ponteiro
+
+Funções
+  funções são blocos de código que executam comandos criado pelo 
+  desenvolvedor, são muito úteis para evitar de repetir o mesmo
+  trecho de código várias vezes.
+
+  Estrutura
+    tipo nome_da_função(tipo_parametro nome_parametros(não é obrigatório0)){
+      código
+    }
+
+  onde o tipo = int, float, char , void, bool
+  e nos parametros podemos passar 0 ou mais parametros, para adicionar
+  mais que um parâmetro separe-os por virgula
+  ex:
+  int funcao1(int valor1, int valor2)
