@@ -103,6 +103,19 @@ Pessoa * removeXSeq(Pessoa *listaPessoa, int *tamanhoLista, int posicao){
     return novaListaSeq;
 }
 
+char * buscaNome(Pessoa *listaPessoa, int *tamanhoLista, int rg) {
+    int cont;
+    char *nomeEncontrado = malloc(sizeof(char[255])); 
+    strcpy(nomeEncontrado,"Nenhum nome encontrado");
+    for(cont = 0; cont < *tamanhoLista; cont++) {
+        if(listaPessoa[cont].rg = rg){
+            strcpy(nomeEncontrado, listaPessoa[cont].nome);
+            return  nomeEncontrado;
+        }
+    }
+    return nomeEncontrado;
+}
+
 int main() {
 
     Pessoa *listaPessoa;
@@ -110,8 +123,9 @@ int main() {
     int tamanhoLista = 0;
     int rg,posicao;
     char *nome;
+    char *buscarN;
     while(escolha < 9 && escolha > 0) {
-        system("clear");
+        //system("clear");
         imprimePessoas(listaPessoa,tamanhoLista);
         printf("\nEscolha uma opção: \n");
         printf("1 - Adicionar inicio\n");
@@ -120,6 +134,7 @@ int main() {
         printf("4 - Remove Inicio\n");
         printf("5 - Remove Fim\n");
         printf("6 - Remove posicao x\n");
+        printf("7 - Buscar nome pelo rg");
         scanf("%d",&escolha);
         switch (escolha)
         {
@@ -188,6 +203,12 @@ int main() {
                     }
                 }
                 break;
+            
+            case 7:
+                printf("Digite um rg \n");
+                scanf("%d",&rg);
+                buscarN = buscaNome(listaPessoa, &tamanhoLista, rg);
+                printf("Nome pelo rg: %s\n",buscarN);
         }
     }
     return 0;
